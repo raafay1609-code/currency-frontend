@@ -75,7 +75,7 @@ export class ConverterComponent implements OnInit {
       rate: res.data.rate,
       convertedAmount: res.data.converted_amount,
       date: res.data.date,
-      createdAt: new Date().toISOString().split('T')[0]
+      createdAt: new Date().toLocaleDateString('en-CA')
     });
     localStorage.setItem('conversion_history', JSON.stringify(this.conversionHistory));
   }
